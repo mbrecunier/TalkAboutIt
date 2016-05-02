@@ -23,8 +23,7 @@ import butterknife.ButterKnife;
  */
 public class CategoryViewHolder extends RecyclerView.ViewHolder {
     private List<Category> mCategories = new ArrayList<>();
-    @Bind(R.id.categoryNameTextView)
-    TextView mCategoryNameTextView;
+    @Bind(R.id.categoryNameTextView) TextView mCategoryNameTextView;
     private Context mContext;
 
     public CategoryViewHolder(View itemView, ArrayList<Category> categories) {

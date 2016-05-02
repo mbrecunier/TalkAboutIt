@@ -38,7 +38,6 @@ public class CategoryListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_category_list, container, false);
-        // Inflate the layout for this fragment
         ButterKnife.bind(this, view);
 
         mFirebaseCategoriesRef = new Firebase(Constants.FIREBASE_URL_CATEGORIES);
