@@ -1,11 +1,14 @@
 package com.epicodus.talkaboutit.models;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Guest on 5/2/16.
  */
+@Parcel
 public class Post {
     private String title;
     private String body;
@@ -17,6 +20,8 @@ public class Post {
         this.body = body;
         this.author = author;
     }
+
+    public Post() {}
 
     public String getTitle() {
         return title;

@@ -1,8 +1,11 @@
 package com.epicodus.talkaboutit.models;
 
+import org.parceler.Parcel;
+
 /**
  * Created by Guest on 5/2/16.
  */
+@Parcel
 public class Comment {
     private String author;
     private String body;
@@ -11,6 +14,8 @@ public class Comment {
         this.author = author;
         this.body = body;
     }
+
+    public Comment() {}
 
     public String getBody() {
         return body;
