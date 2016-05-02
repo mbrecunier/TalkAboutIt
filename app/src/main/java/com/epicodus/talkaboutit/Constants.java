@@ -5,4 +5,6 @@ package com.epicodus.talkaboutit;
  */
 public class Constants {
     public static final String FIREBASE_URL = BuildConfig.FIREBASE_ROOT_URL;
+    public static final String FIREBASE_CATEGORIES = "categories";
+    public static final String FIREBASE_URL_CATEGORIES = FIREBASE_URL + "/" + FIREBASE_CATEGORIES;
 }
