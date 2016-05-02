@@ -13,9 +13,8 @@ public class Category {
     private String name;
     private List<Post> posts = new ArrayList<>();
 
-    public Category(String name, List<Post> posts) {
+    public Category(String name) {
         this.name = name;
-        this.posts = posts;
     }
 
     public Category() {}

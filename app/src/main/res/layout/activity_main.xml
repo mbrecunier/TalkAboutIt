@@ -14,4 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/fragment_add_category" />
+
+    <fragment android:name="com.epicodus.talkaboutit.ui.CategoryListFragment"
+        android:id="@+id/categoryListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_category_list"
+        android:layout_below="@+id/addCategoryFragment"/>
 </RelativeLayout>
