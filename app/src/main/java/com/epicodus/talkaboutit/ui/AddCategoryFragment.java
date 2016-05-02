@@ -12,9 +12,13 @@ import android.widget.Toast;
 
 import com.epicodus.talkaboutit.Constants;
 import com.epicodus.talkaboutit.R;
+import com.epicodus.talkaboutit.models.Category;
 import com.firebase.client.Firebase;
 
+import org.parceler.Parcels;
+
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,17 +27,29 @@ public class AddCategoryFragment extends Fragment implements View.OnClickListene
     @Bind(R.id.addCategoryButton) Button mAddCategoryButton;
     @Bind(R.id.newCategoryEditText) EditText mNewCategoryEditText;
 
-    public AddCategoryFragment() {
+
+    public static AddCategoryFragment newInstance(Category category) {
+        AddCategoryFragment addCategoryFragment = new AddCategoryFragment();
+        Bundle args = new Bundle();
+        args.putParcelable("category", Parcels.wrap(category));
+        return addCategoryFragment;
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view =  inflater.inflate(R.layout.fragment_add_category, container, false);
+        ButterKnife.bind(this, view);
+
         mAddCategoryButton.setOnClickListener(this);
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_category, container, false);
+        return view;
     }
 
     @Override

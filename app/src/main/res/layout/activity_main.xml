@@ -9,8 +9,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <fragment android:name="com.epicodus.talkaboutit.ui.AddCategoryFragment"
+        android:id="@+id/addCategoryFragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        tools:layout="@layout/fragment_add_category" />
 </RelativeLayout>
