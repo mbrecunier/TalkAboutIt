@@ -7,9 +7,9 @@ import org.parceler.Parcel;
  */
 @Parcel
 public class Comment {
-    private String author;
-    private String body;
-    private String post;
+    public String author;
+    public String body;
+    public String post;
 
     public Comment(String author, String body, String post) {
         this.author = author;
