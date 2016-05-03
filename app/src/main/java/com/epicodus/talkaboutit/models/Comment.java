@@ -9,10 +9,12 @@ import org.parceler.Parcel;
 public class Comment {
     private String author;
     private String body;
+    private String post;
 
-    public Comment(String author, String body) {
+    public Comment(String author, String body, String post) {
         this.author = author;
         this.body = body;
+        this.post = post;
     }
 
     public Comment() {}
@@ -23,5 +25,9 @@ public class Comment {
 
     public String getAuthor() {
         return author;
+    }
+
+    public String getPost() {
+        return post;
     }
 }
