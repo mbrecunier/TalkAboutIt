@@ -13,7 +13,9 @@ import com.firebase.client.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     private Firebase mNewCategoryRef;
+    private Firebase mNewPostRef;
     private ValueEventListener mNewCategoryRefListener;
+    private ValueEventListener mNewPostRefListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mNewCategoryRef = new Firebase(Constants.FIREBASE_URL_CATEGORIES);
-
+        mNewPostRef = new Firebase(Constants.FIREBASE_URL_POSTS);
 
         mNewCategoryRefListener = mNewCategoryRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -35,11 +37,25 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        mNewPostRefListener = mNewPostRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String posts = dataSnapshot.getValue().toString();
+                Log.d("Post added", posts);
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
         mNewCategoryRef.removeEventListener(mNewCategoryRefListener);
+        mNewPostRef.removeEventListener(mNewPostRefListener);
     }
 }

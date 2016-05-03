@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.CategoryDetailActivity" />
-        <activity android:name=".ui.AddPostActivity"></activity>
+        <activity android:name=".ui.PostDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,16 +6,33 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Category Name"
-        android:id="@+id/categoryNameTextView"/>
+        android:id="@+id/categoryNameTextView"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textSize="20sp"/>
+
+    <fragment android:name="com.epicodus.talkaboutit.ui.PostListFragment"
+        android:id="@+id/postListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_post_list"
+        android:layout_below="@+id/categoryNameTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="69dp"
+        android:layout_above="@+id/addPostButton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Post"
         android:id="@+id/addPostButton"
-        android:layout_gravity="right|top" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-</FrameLayout>
+</RelativeLayout>

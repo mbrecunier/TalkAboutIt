@@ -9,16 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ui.MainActivity">
 
+    <fragment android:name="com.epicodus.talkaboutit.ui.CategoryListFragment"
+        android:id="@+id/categoryListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_category_list"/>
+
     <fragment android:name="com.epicodus.talkaboutit.ui.AddCategoryFragment"
         android:id="@+id/addCategoryFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_add_category" />
+        tools:layout="@layout/fragment_add_category"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <fragment android:name="com.epicodus.talkaboutit.ui.CategoryListFragment"
-        android:id="@+id/categoryListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_category_list"
-        android:layout_below="@+id/addCategoryFragment"/>
 </RelativeLayout>
