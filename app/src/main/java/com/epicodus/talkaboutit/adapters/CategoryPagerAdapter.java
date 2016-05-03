@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.epicodus.talkaboutit.models.Category;
 import com.epicodus.talkaboutit.ui.AddCategoryFragment;
+import com.epicodus.talkaboutit.ui.CategoryDetailFragment;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ public class CategoryPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        return AddCategoryFragment.newInstance(mCategories.get(position));
+        return CategoryDetailFragment.newInstance(mCategories.get(position));
     }
 
     @Override
